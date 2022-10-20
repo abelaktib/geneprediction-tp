@@ -62,9 +62,9 @@ def read_fasta(fasta_file):
     """Extract the complete genome sequence as a single string
     """
     with open(fasta_file, 'r') as file:
-        l = file.readlines()
+        line = file.readlines()
         fasta_file = ""
-        for i in l[1:]:
+        for i in line[1:]:
             fasta_file += i.strip()
     return fasta_file.upper()
 
